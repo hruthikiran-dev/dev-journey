@@ -143,3 +143,67 @@ Best Time to Buy and Sell Stock (LeetCode 121)
 ### What I fixed
 - Replaced the nested-loop approach with a single traversal by maintaining a prefix minimum.
 - Computed the profit for each selling day in O(1) time and updated the maximum profit obtained so far.
+
+
+### Day 2 – Arrays | Matrix Manipulation + Two Pointers + Sorting
+
+### Problem - 1 (Arrays | Matrix Manipulation)
+Rotate Image (LeetCode 48)
+
+### What I learned
+- A 90° clockwise rotation can be performed in-place by first transposing the matrix and then reversing every row. Transposing swaps rows with columns, and reversing each row changes the orientation to produce the required rotation.
+- for 180°, you first reverse row and then reverse col.
+- for 270°, you first transpose and then reverse col.
+
+### What confused me
+- Initially, it wasn't obvious why performing a transpose followed by reversing each row results in a 90° clockwise rotation.
+- I also explored the layer-by-layer four-way swap approach, but the index calculations were more difficult to understand and remember.
+
+### What I fixed
+- Swapped only the elements above the main diagonal to transpose the matrix without affecting previously swapped elements.
+- Reversed each row after transposition to complete the rotation in **O(n²)** time using **O(1)** extra space.
+
+### Problem - 2 (Arrays | Sorting + Interval Merging)
+Merge Intervals (LeetCode 56)
+
+### What I learned
+- Sorting the intervals by their starting time ensures that all overlapping intervals appear consecutively.
+- Instead of creating separate variables for the current interval, the last interval stored in the result can be updated directly whenever an overlap is found.
+
+### What confused me
+- Initially, I assumed I could merge intervals without sorting, but I realized overlapping intervals may not be adjacent in an unsorted array.
+- I also forgot to extend the merged interval using the maximum ending point, which could incorrectly shrink the merged interval.
+
+### What I fixed
+- Sorted the intervals before processing to ensure overlaps are handled correctly.
+- Used the last interval in the result vector to merge overlapping intervals by updating its ending value with the maximum end point.
+
+### Problem - 3 (Arrays | Three Pointers)
+Merge Sorted Array (LeetCode 88)
+
+### What I learned
+- Since nums1 already has enough space at the end, merging from the back prevents overwriting elements that are still needed.
+- Comparing the largest remaining elements from both arrays allows the merged array to be built in-place without using extra space.
+
+### What confused me
+- Initially, I tried merging from the front using an extra array, which worked but required O(m+n) extra space.
+- I also made pointer initialization mistakes and forgot that the second pointer should start at n-1, not n.
+
+### What I fixed
+- Switched to the three-pointer approach by starting from the end of both arrays and filling nums1 from the last index.
+- Correctly initialized the pointers and merged the arrays in-place with O(m+n) time and O(1) extra space.
+
+### Problem - 4 (Arrays | Floyd's Cycle Detection)
+Find the Duplicate Number (LeetCode 287)
+
+### What I learned
+- An array can be viewed as a linked list by treating each value as the index of the next node.
+- The duplicate number creates a cycle, allowing Floyd's Slow & Fast Pointer algorithm to detect the cycle and identify its starting point in O(n) time using O(1) extra space.
+
+### What confused me
+- Initially, it was difficult to understand how an array could be treated as a linked list and why a duplicate number forms a cycle.
+- I also found the second phase of Floyd's algorithm confusing, especially why resetting one pointer to the beginning and moving both pointers one step at a time always leads to the duplicate.
+
+### What I fixed
+- Understood the array-to-linked-list mapping and how the duplicate becomes the entry point of the cycle.
+- Correctly implemented both phases of Floyd's algorithm: first detecting the meeting point and then finding the cycle's entrance to return the duplicate number.
