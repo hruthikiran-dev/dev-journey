@@ -207,3 +207,51 @@ Find the Duplicate Number (LeetCode 287)
 ### What I fixed
 - Understood the array-to-linked-list mapping and how the duplicate becomes the entry point of the cycle.
 - Correctly implemented both phases of Floyd's algorithm: first detecting the meeting point and then finding the cycle's entrance to return the duplicate number.
+
+
+### Day 3 – Binary Search | Binary Exponentiation + Moore's Voting
+
+### Problem - 1 (Binary Search | Matrix Search)
+Search a 2D Matrix (LeetCode 74)
+
+### What I learned
+- A globally sorted matrix can be searched efficiently using binary search instead of checking every element.
+- Learned two approaches: first finding the candidate row and then searching within it, and the optimal approach of treating the matrix as a virtual 1D sorted array.
+
+### What confused me
+- I was confused about how to identify the correct row after the first binary search and why `row = h` works.
+- It was also difficult to understand how a 2D matrix could be treated as a 1D sorted array without actually flattening it.
+
+### What I fixed
+- Understood that `h` points to the last possible candidate row after the first binary search.
+- Learned to map a virtual 1D index back to the matrix using `row = mid / cols` and `col = mid % cols`.
+
+### Problem - 2 (Binary Search | Binary Exponentiation)
+Pow(x, n) (LeetCode 50)
+
+### What I learned
+- Binary Exponentiation reduces the number of multiplications by processing the exponent in its binary form.
+- Squaring the base after every step and multiplying it with the answer only when the current exponent bit is `1` gives an `O(log n)` solution.
+
+### What confused me
+- Initially, I thought bitwise left shift (`<<`) could be used to calculate powers.
+- I also found it difficult to understand why repeatedly squaring the base still produces the correct answer.
+
+### What I fixed
+- Understood that `<<` only multiplies a number by powers of two, not computes arbitrary powers.
+- Learned how binary representation of the exponent determines which powers of the base contribute to the final answer.
+
+### Problem - 7 (Arrays | Moore's Voting Algorithm)
+Majority Element (LeetCode 169)
+
+### What I learned
+- Moore's Voting Algorithm finds the majority element by maintaining only a candidate and a counter.
+- Different elements cancel each other's votes, so the majority element survives as the final candidate.
+
+### What confused me
+- I initially believed storing frequencies using a HashMap was necessary to solve the problem.
+- It was difficult to understand how the algorithm could correctly identify the majority element without keeping track of every element's frequency.
+
+### What I fixed
+- Understood that only one candidate and a counter are needed because different elements cancel each other's votes.
+- Learned why the majority element always remains after all possible cancellations, making the algorithm work in `O(n)` time and `O(1)` space.
