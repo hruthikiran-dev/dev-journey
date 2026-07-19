@@ -241,7 +241,7 @@ Pow(x, n) (LeetCode 50)
 - Understood that `<<` only multiplies a number by powers of two, not computes arbitrary powers.
 - Learned how binary representation of the exponent determines which powers of the base contribute to the final answer.
 
-### Problem - 7 (Arrays | Moore's Voting Algorithm)
+### Problem - 3 (Arrays | Moore's Voting Algorithm)
 Majority Element (LeetCode 169)
 
 ### What I learned
@@ -255,3 +255,23 @@ Majority Element (LeetCode 169)
 ### What I fixed
 - Understood that only one candidate and a counter are needed because different elements cancel each other's votes.
 - Learned why the majority element always remains after all possible cancellations, making the algorithm work in `O(n)` time and `O(1)` space.
+
+
+### Day 4 –  Moore's Voting
+
+### Problem - 1 (Arrays | Boyer-Moore Voting Algorithm)
+Majority Element II (LeetCode 229)
+
+### What I learned
+- There can be at most two elements appearing more than ⌊n/3⌋ times.
+- Boyer-Moore Voting Algorithm uses two candidates and two counters to find potential majority elements in O(n) time and O(1) space.
+- A second pass is needed to verify the actual frequencies of the candidates.
+
+### What confused me
+- Initially, I thought the counters represented actual frequencies and that one pass was enough.
+- It was confusing why both counters are decremented when a different element appears.
+
+### What I fixed
+- Understood that the counters store vote balance, not frequency.
+- Fixed the candidate checking order before assigning new candidates.
+- Verified the final answer using `count > ⌊n/3⌋`.
