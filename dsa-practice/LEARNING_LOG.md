@@ -226,7 +226,7 @@ Search a 2D Matrix (LeetCode 74)
 - Understood that `h` points to the last possible candidate row after the first binary search.
 - Learned to map a virtual 1D index back to the matrix using `row = mid / cols` and `col = mid % cols`.
 
-### Problem - 2 (Binary Search | Binary Exponentiation)
+### Problem - 2 (Binary Search   | Binary Exponentiation)
 Pow(x, n) (LeetCode 50)
 
 ### What I learned
