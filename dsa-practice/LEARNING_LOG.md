@@ -271,7 +271,7 @@ Majority Element II (LeetCode 229)
 - Initially, I thought the counters represented actual frequencies and that one pass was enough.
 - It was confusing why both counters are decremented when a different element appears.
 
-### What I fixed
+### What  I fixed
 - Understood that the counters store vote balance, not frequency.
 - Fixed the candidate checking order before assigning new candidates.
 - Verified the final answer using `count > ⌊n/3⌋`.
