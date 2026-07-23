@@ -265,7 +265,7 @@ Majority Element II (LeetCode 229)
 ### What I learned
 - There can be at most two elements appearing more than ⌊n/3⌋ times.
 - Boyer-Moore Voting Algorithm uses two candidates and two counters to find potential majority elements in O(n) time and O(1) space.
-- A second pass is needed to verify the actual frequencies of the candidates.
+- A second pass is needed to verify the actual frequencies of the candidates .
 
 ### What confused me
 - Initially, I thought the counters represented actual frequencies and that one pass was enough.
@@ -274,4 +274,4 @@ Majority Element II (LeetCode 229)
 ### What  I fixed
 - Understood that the counters store vote balance, not frequency.
 - Fixed the candidate checking order before assigning new candidates.
-- Verified the final answer using `count > ⌊n/3⌋`.
+- Verified the final answer using `count > ⌊n/3⌋` .
