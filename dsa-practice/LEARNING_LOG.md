@@ -235,7 +235,7 @@ Pow(x, n) (LeetCode 50)
 
 ### What confused me
 - Initially, I thought bitwise left shift (`<<`) could be used to calculate powers.
-- I also found it difficult to understand why repeatedly squaring the base still produces the correct answer.
+- I also found it difficult to understand why repeatedly squaring the base still produces the correct answer .
 
 ### What I fixed
 - Understood that `<<` only multiplies a number by powers of two, not computes arbitrary powers.
